@@ -1,5 +1,9 @@
 // We enclose this in window.onload.
 // So we don't have ridiculous errors.
+function dapp(){
+    document.body.classList.add("desktopapp");
+}
+
 window.onload = function () {
     // Your web app's Firebase configuration
     const firebaseConfig = {
@@ -24,7 +28,7 @@ window.onload = function () {
     // This is very IMPORTANT!! We're going to use "db" a lot.
     var db = firebase.database()
     // We're going to use oBjEcT OrIeNtEd PrOgRaMmInG. Lol
-    class MEME_CHAT {
+    class chatz {
         // Home() is used to create the home page
         home() {
             // First clear the body before adding in
@@ -48,7 +52,7 @@ window.onload = function () {
 
             var title = document.createElement('h1')
             title.setAttribute('id', 'title')
-            title.textContent = 'Chat Thing'
+            title.textContent = 'chatz\''
 
             title_inner_container.append(title)
             title_container.append(title_inner_container)
@@ -68,7 +72,7 @@ window.onload = function () {
 
             var join_button = document.createElement('button')
             join_button.setAttribute('id', 'join_button')
-            join_button.innerHTML = 'Sign in'
+            join_button.innerHTML = "chatz' with people"
 
             var join_input_container = document.createElement('div')
             join_input_container.setAttribute('id', 'join_input_container')
@@ -76,7 +80,7 @@ window.onload = function () {
             var join_input = document.createElement('input')
             join_input.setAttribute('id', 'join_input')
             join_input.setAttribute('maxlength', 15)
-            join_input.placeholder = 'Name'
+            join_input.placeholder = 'username'
             // Every time we type into the join_input
             join_input.onkeyup = function () {
                 // If the input we have is longer that 0 letters
@@ -153,14 +157,14 @@ window.onload = function () {
             var chat_input_send = document.createElement('button')
             chat_input_send.setAttribute('id', 'chat_input_send')
             chat_input_send.setAttribute('disabled', true)
-            chat_input_send.innerHTML = `<i>Send</i>`
+            chat_input_send.innerHTML = `<i>send</i>`
 
             var chat_input = document.createElement('input')
             chat_input.setAttribute('id', 'chat_input')
             // Only a max message length of 1000
             chat_input.setAttribute('maxlength', 1000)
             // Get the name of the user
-            chat_input.placeholder = 'Chat'
+            chat_input.placeholder = 'chat'
             chat_input.onkeyup = function () {
                 if (chat_input.value.length > 0) {
                     chat_input_send.removeAttribute('disabled')
@@ -333,7 +337,7 @@ window.onload = function () {
         }
     }
     // So we've "built" our app. Let's make it work!!
-    var app = new MEME_CHAT()
+    var app = new chatz()
     // If we have a name stored in localStorage.
     // Then use that name. Otherwise , if not.
     // Go to home.

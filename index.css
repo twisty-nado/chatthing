@@ -1,12 +1,16 @@
 body {
     /* https://www.color-hex.com/color/d3d3d3 */
-    background-color: #fff;
+    background-color: #222;
     /*#f6f6f6, EBEBD3, fafafa*/
     font-family: monospace !important;
     font-weight: 900;
 
     overflow: hidden;
 
+}
+
+.desktopapp{
+    background-color: transparent !important;
 }
 
 * {
@@ -26,9 +30,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: #000000;
-    /*#467599;*/
-    border-bottom: 5px solid #fff;
+    background-color: transparent;
     border-radius: 0 !important;
 
 }
@@ -87,12 +89,12 @@ body {
     width: 60%;
     height: 40px;
 
-    color: #1D3354;
+    color: #fff;
     font-size: 15px;
     font-weight: bold;
     text-align: center;
     background-color: Transparent;
-
+    box-shadow: inset 0 0 4px 0 #fff;
 }
 
 #join_button_container {
@@ -113,6 +115,7 @@ body {
     font-weight: bold;
     text-align: center;
     color: #fff;
+    background-color: #666;
 }
 
 #chat_container {
@@ -130,7 +133,7 @@ body {
 }
 
 #chat_inner_container {
-    width: 40%;
+    width: 80%;
     height: 100%;
 }
 
@@ -162,8 +165,10 @@ body {
     height: 100%;
     float: left;
     background-color: Transparent;
-    color: #1D3354;
+    color: #fff;
     font-size: 15px;
+    padding-left: 16px;
+    box-shadow: inset 0 0 4px 0 #fff;
 }
 
 #chat_input_send {
@@ -196,7 +201,8 @@ body {
 }
 
 #chat_logout {
-    color: #000;
+    color: #fff;
+    background-color: #222;
     cursor: pointer;
 }
 
@@ -215,7 +221,7 @@ body {
     width: 100%;
     display: inline-block;
 
-    color: #1D3354;
+    color: #fff;
 }
 
 .message_user_container {
@@ -245,8 +251,8 @@ body {
 
 .enabled {
     transition: background-color 0.5s;
-    color: #fff;
-    background-color: #000;
+    color: #fff !important;
+    background-color: #000 !important;
     /*#5B7553;*/
     cursor: pointer;
 }
@@ -254,6 +260,10 @@ body {
 i{
     font-family: monospace;
     font-size: medium;
+}
+
+#chat_input_send{
+    background-color: transparent !important;
 }
 
 #title_container.chat_title_container {
@@ -333,6 +343,6 @@ i{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #000;
+    background: #fff;
     border-radius: 5px;
 }

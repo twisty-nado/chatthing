@@ -328,6 +328,12 @@ window.onload = function () {
                     message_inner_container.append(message_user_container, message_content_container)
                     message_container.append(message_inner_container)
 
+                    if (name == app.get_name()){
+                        message_container.classList.add("user")
+                    }
+                    
+                    chat_content_container.innerHTML += "<br/>"
+                    
                     chat_content_container.append(message_container)
                 });
                 // Go to the recent message at the bottom of the container

@@ -5,8 +5,14 @@ body {
     font-family: monospace !important;
     font-weight: 900;
 
+    height: 100%;
+
     overflow: hidden;
 
+}
+
+html{
+    height: calc(100% - 160px);
 }
 
 .desktopapp{
@@ -120,12 +126,11 @@ body {
 
 #chat_container {
     width: 100%;
-    height: 450px;
+    height: 100%;
 
     display: flex;
     justify-content: center;
 
-    float: left;
     margin-top: 40px;
     /* Fade in container */
     animation: fadeIn 1s linear;
@@ -150,7 +155,7 @@ body {
 
 #chat_input_container {
     width: 100%;
-    height: 10%;
+    height: 30px;
 
     float: left;
     background-color: Transparent;
@@ -161,8 +166,8 @@ body {
 }
 
 #chat_input {
-    width: 90%;
-    height: 100%;
+    width: calc(100% - 40px);
+    height: 30px;
     float: left;
     background-color: Transparent;
     color: #fff;
@@ -172,8 +177,8 @@ body {
 }
 
 #chat_input_send {
-    width: 10%;
-    height: 100%;
+    width: 40px;
+    height: 30px;
     float: left;
     font-size: 18px;
     background-color: Transparent;
@@ -197,7 +202,7 @@ body {
     align-items: center;
 
     float: left;
-    margin-top: 20px;
+    margin-top: 4px;
 }
 
 #chat_logout {
@@ -210,11 +215,31 @@ body {
     text-decoration: underline;
 }
 
+br{
+    width: 100%;
+    display: block;
+}
+
 .message_container {
     width: 100%;
     display: inline-block;
     margin-bottom: 20px;
+    border-radius: 6px;
+    border-bottom-left-radius: 0;
+    background-color: #666c;
+    backdrop-filter: blur(4px);
+    box-shadow: inset 0 0 1px #fffc;
+    outline: solid 1px #0005;
+    max-width: 400px;
+    width: auto;
+    padding: 8px;
+}
 
+.message_container.user{
+    border-radius: 6px;
+    border-bottom-right-radius: 0;
+    background-color: #0afc;
+    float: right;
 }
 
 .message_inner_container {

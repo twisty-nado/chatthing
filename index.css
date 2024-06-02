@@ -161,7 +161,7 @@ body {
 }
 
 #chat_input {
-    width: 95%;
+    width: 90%;
     height: 100%;
     float: left;
     background-color: Transparent;
@@ -172,7 +172,7 @@ body {
 }
 
 #chat_input_send {
-    width: 5%;
+    width: 10%;
     height: 100%;
     float: left;
     font-size: 18px;
@@ -202,7 +202,7 @@ body {
 
 #chat_logout {
     color: #fff;
-    background-color: #222;
+    background-color: transparent;
     cursor: pointer;
 }
 
